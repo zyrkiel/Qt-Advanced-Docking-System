@@ -731,9 +731,6 @@ void CDockAreaWidget::setCurrentIndex(int index)
 		d->ContentsLayout->currentWidget()->winId();
 	}
 	d->ContentsLayout->currentWidget()->show();
-	// Force the repaint of the current widget because mix of OpenGL widgets
-	// and Raster widgets could have not been entirely rendered
-	d->ContentsLayout->currentWidget()->repaint();
 	Q_EMIT currentChanged(index);
 }
 
